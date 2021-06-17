@@ -154,8 +154,16 @@ const COMMA_SEPARATED_LIST_PROPERTIES = [
   'transitionDelay'
 ];
 
+const ValueType = {
+  COMPONENT: 0,
+  LAZY: 1,
+  FUNCTION: 2,
+  VALUE: 3
+};
+
 module.exports = {
   UNITLESS_NUMBERS,
   PROPERTY_PRIORITY,
-  COMMA_SEPARATED_LIST_PROPERTIES
+  COMMA_SEPARATED_LIST_PROPERTIES,
+  ValueType
 };
