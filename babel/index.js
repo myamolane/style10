@@ -1,6 +1,7 @@
 const Module = require('@linaria/babel-preset/lib/module').default;
 const NAME = require('../package.json').name;
 const processReferences = require('../src/process-references.js');
+const { expCache } = require('../src/exp-cache');
 const {
   detectImportedPackageName
 } = require('./visitors/detectImportedPackageName');
@@ -48,6 +49,7 @@ module.exports = function style9BabelPlugin(babel, options) {
         exit() {
           // Invalidate cache for module evaluation when we're done
           Module.invalidate();
+          expCache.clear();
         }
       }
     }

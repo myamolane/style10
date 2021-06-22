@@ -15,6 +15,10 @@ function listStaticKeys(callExpr, allKeys) {
     return properties.map(prop => prop.node.key.name);
   }
 
+  if (parentPath.node.callee && parentPath.node.callee.name === '__rest') {
+    return allKeys;
+  }
+
   return [];
 }
 

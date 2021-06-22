@@ -1,4 +1,4 @@
-const expCache = new WeakMap();
+const expCache = new Map();
 
 module.exports = {
   expCache
