@@ -1,5 +1,5 @@
 {
-  "name": "@tencent/style9",
+  "name": "style10",
   "version": "0.10.7-beta-1",
   "description": "CSS-in-JS compiler",
   "author": "Johan Holmerin <johan@holmer.in>",

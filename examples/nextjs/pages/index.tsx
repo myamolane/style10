@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import style9 from 'style9';
+import style9 from 'style10';
 import { layout } from '../shared/styles';
 
 const styles = style9.create({

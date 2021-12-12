@@ -7,7 +7,7 @@ CSS-in-JS compiler inspired by Facebook's [stylex][stylex], with near-zero runti
 *For a complete walkthrough of the API, see [Usage guide](docs/Usage-guide.md).*
 
 ```javascript
-import style9 from 'style9';
+import style9 from 'style10';
 
 const styles = style9.create({
   blue: {
@@ -36,10 +36,10 @@ document.body.className = isRed ? 'cyyg6ey ' : 'c1r9f2e5 ';
 
 ```sh
 # Yarn
-yarn add style9
+yarn add style10
 
 # npm
-npm install style9
+npm install style10
 ```
 
 ## Compiler setup - required
@@ -47,7 +47,7 @@ npm install style9
 The following is the minimally required Webpack setup for extracting styles to a CSS file. For Webpack options and Rollup, Next.js, Gatsby, and Babel plugins, see [Bundler plugins](docs/Bundler-plugins.md).
 
 ```javascript
-const Style9Plugin = require('style9/webpack');
+const Style9Plugin = require('style10/webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {

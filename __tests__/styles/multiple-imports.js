@@ -3,8 +3,8 @@ const compile = require('../compile.js');
 
 it('supports multiple imports', () => {
   const input = `
-import style0 from 'style9';
-import style1 from 'style9';
+import style0 from 'style10';
+import style1 from 'style10';
 const styles0 = style0.create({
   first: {
     color: 'blue'

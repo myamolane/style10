@@ -1,4 +1,4 @@
-import style9 from 'style9';
+import style9 from 'style10';
 const styles1 = style9.create({
   default: {
     color: 'blue'

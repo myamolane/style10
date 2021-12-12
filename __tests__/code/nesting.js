@@ -3,7 +3,7 @@ const compile = require('../compile.js');
 
 it('throws on invalid nesting', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     foo: {
@@ -26,7 +26,7 @@ const styles = style9.create({
 
 it('throws on invalid nesting with dynamic key', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     [foo]: {
@@ -49,7 +49,7 @@ const styles = style9.create({
 
 it('throws on spread object', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const foo = {};
 const styles = style9.create({
   ...foo

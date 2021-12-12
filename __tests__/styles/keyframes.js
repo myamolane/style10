@@ -3,7 +3,7 @@ const compile = require('../compile.js');
 
 it('generates keyframes', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 style9.keyframes({
   '0%': {
     color: 'blue'
@@ -20,7 +20,7 @@ style9.keyframes({
 
 it('removes empty frame', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 style9.keyframes({
   '0%': {
     color: 'blue'
@@ -36,7 +36,7 @@ style9.keyframes({
 
 it('converts from', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 style9.keyframes({
   from: {
     color: 'blue'
@@ -50,7 +50,7 @@ style9.keyframes({
 
 it('converts to', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 style9.keyframes({
   to: {
     color: 'blue'
@@ -64,7 +64,7 @@ style9.keyframes({
 
 it('expands shorthand', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 style9.keyframes({
   '0%': {
     padding: '1rem',
@@ -85,7 +85,7 @@ style9.keyframes({
 
 it('keeps longhand', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 style9.keyframes({
   '0%': {
     padding: '1rem',

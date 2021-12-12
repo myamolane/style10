@@ -27,7 +27,7 @@ style9 deals with defining styles and generating class names, nothing else. This
 There are two types of values that can be considered dynamic: the first is about choosing among pre-defined styles based on a runtime value. These are fully supported, for example:
 
 ```typescript
-import style9 from 'style9';
+import style9 from 'style10';
 
 const styles = style9.create({
   blue: {
@@ -44,7 +44,7 @@ export const getClass(color: keyof typeof styles) => style9(styles[color]);
 The other is using a value that's only available at the runtime, a common example being setting a user-defined image as a background. These are not available while compiling, and are therefore not supported. However, these values are one-off and limited in use, and does not suffer from being set inline. Or, if reuse is required, they can be set as CSS Custom Properties:
 
 ```typescript
-import style9 from 'style9';
+import style9 from 'style10';
 
 const styles = style9.create({
   avatar: {

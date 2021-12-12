@@ -23,7 +23,7 @@ Babel failed to evaluate a value used in a style definition. Try moving the valu
 #### Unsupported uses
 
 ```javascript
-import style9 from 'style9';
+import style9 from 'style10';
 import importedColor from './color';
 
 const OBJECT = {
@@ -43,7 +43,7 @@ const styles = style9.create({
 #### Supported use
 
 ```javascript
-import style9 from 'style9';
+import style9 from 'style10';
 
 const COLOR = 'blue';
 

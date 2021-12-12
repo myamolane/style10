@@ -3,7 +3,7 @@ const compile = require('../compile.js');
 
 it('uses incremental classname for styles', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style100';
 const styles = style9.create({
   default: {
     paddingLeft: 2,

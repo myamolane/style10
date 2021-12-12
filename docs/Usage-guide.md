@@ -5,7 +5,7 @@
 Styles are defined by calling `style9.create` with objects of style definitions. The return value is then a function which can be called with the names of the created style objects, and returns string of class names.
 
 ```javascript
-import style9 from 'style9';
+import style9 from 'style10';
 
 const styles = style9.create({
   blue: {
@@ -21,7 +21,7 @@ document.body.className = styles('blue');
 Multiple styles can be applied by passing the names to the `styles` function. Style objects will be merged like with `Object.assign`, with styles to the right taking precedence. To conditionally apply styles, use logical AND or ternary operator. Alternatively, an object containing the keys of the style object can be used. Later keys take precedence.
 
 ```javascript
-import style9 from 'style9';
+import style9 from 'style10';
 
 const styles = style9.create({
   blue: {
@@ -46,7 +46,7 @@ document.body.className = styles({
 To compose styles from multiple declarations, `style9` can be called as a function with the properties of the generated style object. This is not subject to the same restrictions as using the `styles` function, and can be fully dynamic.
 
 ```javascript
-import style9 from 'style9';
+import style9 from 'style10';
 
 const someStyles = style9.create({
   blue: {
@@ -68,7 +68,7 @@ document.body.className = style9(someStyles.blue, someOtherStyles['ti' + 'lt']);
 Both pseudo-classes and pseudo-elements are supported and can be nested.
 
 ```javascript
-import style9 from 'style9';
+import style9 from 'style10';
 
 const styles = style9.create({
   blue: {
@@ -92,7 +92,7 @@ Media queries are supported, and will be sorted mobile-first in the generated CS
 **Note:** TypeScript users, see [Media queries with TypeScript](TypeScript.md#media-queries)
 
 ```javascript
-import style9 from 'style9';
+import style9 from 'style10';
 
 const styles = style9.create({
   blue: {
@@ -111,7 +111,7 @@ document.body.className = styles('blue');
 CSS animations are created by calling `style9.keyframes` with the desired keyframe definitions, which returns a string that can be used as `animationName`.
 
 ```javascript
-import style9 from 'style9';
+import style9 from 'style10';
 
 const styles = style9.create({
   blue: {
@@ -133,7 +133,7 @@ To be able to confidently apply class names [shorthand CSS properties][mdn short
 #### Unsupported use
 
 ```javascript
-import style9 from 'style9';
+import style9 from 'style10';
 
 const styles = style9.create({
   shorthand: {
@@ -145,7 +145,7 @@ const styles = style9.create({
 #### Supported uses
 
 ```javascript
-import style9 from 'style9';
+import style9 from 'style10';
 
 const styles = style9.create({
   longhands: {
@@ -165,7 +165,7 @@ const styles = style9.create({
 [For accessibility][accessible-typography], `font-size` should be declared in `REMs`, to allow users to change their base text size. style9 handles this automatically when defining `font-size` as a number.
 
 ```javascript
-import style9 from 'style9';
+import style9 from 'style10';
 
 const styles = style9.create({
   large: {
@@ -185,7 +185,7 @@ Generated CSS:
 It can be useful to define some styles in another file to be able to reuse them. To export a single property, it can be simply accessed from the returned object. If you wish to export all styles as an object you have use spread to show that you won't use the returned function.
 
 ```javascript
-import style9 from 'style9';
+import style9 from 'style10';
 
 export const { specific } = style9.create({
   // ...

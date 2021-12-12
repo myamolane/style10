@@ -1,4 +1,4 @@
-import style9 from 'style9';
+import style9 from 'style100';
 const styles1 = {
   default: {
     color: 'c1r9f2e5'

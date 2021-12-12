@@ -3,7 +3,7 @@ const compile = require('../compile.js');
 
 it('only supports Member- and CallExpression on styles', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     color: 'blue'
@@ -23,13 +23,13 @@ foo(styles);
 
 it('throws on non-existing property import', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 style9.foo;
   `;
   expect(() => compile(input)).toThrowErrorMatchingInlineSnapshot(`
     "unknown: Unsupported use. Supported uses are: style9(), style9.create(), and style9.keyframes()
       1 |
-      2 | import style9 from 'style9';
+      2 | import style9 from 'style10';
     > 3 | style9.foo;
         | ^^^^^^
       4 |   "
@@ -38,7 +38,7 @@ style9.foo;
 
 it('styles throws on non-existing style key', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     color: 'blue'
@@ -58,7 +58,7 @@ styles('blue');
 
 it('styles throws on unsupported operator', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     color: 'blue'
@@ -78,7 +78,7 @@ styles(foo & 'blue');
 
 it('styles throws on failure to evaluate values', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     color: BLUE
@@ -100,7 +100,7 @@ styles('blue');
 
 it('styles throws on spread', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     color: 'red'
@@ -120,7 +120,7 @@ styles({ ...foo })
 
 it('styles throws non-string logical right hand', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   red: {
     color: 'red'
@@ -140,7 +140,7 @@ styles(foo && red)
 
 it('styles throws non-string ternary left hand', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   red: {
     color: 'red'
@@ -160,7 +160,7 @@ styles(foo ? red : 'red')
 
 it('styles throws non-string ternary right hand', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   red: {
     color: 'red'
@@ -180,7 +180,7 @@ styles(foo ? 'red' : red)
 
 it('styles throws on identifier', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     color: 'red'
@@ -200,7 +200,7 @@ styles(foo)
 
 it('styles throws on dynamic key', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   red: {
     color: 'red'

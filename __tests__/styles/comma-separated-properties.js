@@ -3,7 +3,7 @@ const compile = require('../compile.js');
 
 it('handles properties wich can be defined as lists correctly', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     transitionProperty: ['opacity', 'transform'],

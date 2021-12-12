@@ -3,7 +3,7 @@ const compile = require('../compile.js');
 
 it('converts paddingLeft to pixels', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     paddingLeft: 2
@@ -18,7 +18,7 @@ styles('default');
 
 it('does not convert opacity to pixels', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     opacity: 1
@@ -33,7 +33,7 @@ styles('default');
 
 it('expands shorthand', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     padding: '1rem'
@@ -53,7 +53,7 @@ styles('default');
 
 it('does not override longhand', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     padding: '1rem',
@@ -74,7 +74,7 @@ styles('default');
 
 it('converts fontSize pixels', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     fontSize: 14
@@ -89,7 +89,7 @@ styles('default');
 
 it('accepts an array', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     textDecorationLine: ['underline', 'overline']
@@ -104,7 +104,7 @@ styles('default');
 
 it('supports constants', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const BLUE = 'blue';
 const styles = style9.create({
   default: {
@@ -120,7 +120,7 @@ styles('default');
 
 it('removes unused styles', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     color: 'blue'
@@ -134,7 +134,7 @@ const styles = style9.create({
 
 it('keeps styles used in styles()', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     color: 'blue'
@@ -152,7 +152,7 @@ styles('default');
 
 it('keeps styles used as object', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     color: 'blue'
@@ -170,7 +170,7 @@ styles.default;
 
 it('supports static bracket access', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     color: 'blue'
@@ -188,7 +188,7 @@ styles['default']
 
 it('supports dynamic bracket access', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   blue: {
     color: 'blue'
@@ -206,7 +206,7 @@ styles[blue]
 
 it('supports arrow function', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     color: 'blue'
@@ -221,7 +221,7 @@ const get = state => styles(state && 'default');
 
 it('outputs no styles without declaration', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 style9.create({
   default: {
     color: 'blue'
@@ -235,7 +235,7 @@ style9.create({
 
 it('supports spread assignment', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const { ...styles } = style9.create({
   blue: {
     color: 'blue'
@@ -249,7 +249,7 @@ const { ...styles } = style9.create({
 
 it('supports spread use', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   blue: {
     color: 'blue'
@@ -264,7 +264,7 @@ console.log({ ...styles });
 
 it('supports member expression access', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const blue = style9.create({
   blue: {
     color: 'blue'

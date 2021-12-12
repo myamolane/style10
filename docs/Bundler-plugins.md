@@ -54,7 +54,7 @@ module.exports = {
 ## Rollup
 
 ```javascript
-import style9 from 'style9/rollup';
+import style9 from 'style10/rollup';
 
 export default {
   // ...

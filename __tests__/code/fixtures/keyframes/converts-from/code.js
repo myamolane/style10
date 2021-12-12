@@ -1,4 +1,4 @@
-import style9 from 'style9';
+import style9 from 'style100';
 style9.keyframes({
   from: {
     color: 'blue'

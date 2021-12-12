@@ -3,7 +3,7 @@ const compile = require('../compile.js');
 
 it('supports nesting', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     '::before': {
@@ -20,7 +20,7 @@ styles('default');
 
 it('supports at rules', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     '@media (max-width: 1000px)': {
@@ -37,7 +37,7 @@ styles('default');
 
 it('supports deep nesting', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     '@media (max-width: 1000px)': {
@@ -60,7 +60,7 @@ styles('default');
 
 it('generates correct class names', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     '::before': {
@@ -82,7 +82,7 @@ styles('default', 'hidden');
 
 it('translates old pseudo element', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     ':before': { opacity: 1 },

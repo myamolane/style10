@@ -3,7 +3,7 @@ const compile = require('../compile.js');
 
 it('converts transitionProperty to kebab-case', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     transitionProperty: 'backgroundColor',
@@ -18,7 +18,7 @@ styles('default');
 
 it('converts transitionProperty list to kebab-case', () => {
   const input = `
-import style9 from 'style9';
+import style9 from 'style10';
 const styles = style9.create({
   default: {
     transitionProperty: ['backgroundColor', 'borderColor', 'boxShadow'],

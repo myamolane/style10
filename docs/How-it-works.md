@@ -13,7 +13,7 @@ There are two ways of using the value returned from `style9.create`. The first i
 ### Input
 
 ```javascript
-import style9 from 'style9';
+import style9 from 'style10';
 
 const styles = style9.create({
   blue: {
@@ -45,7 +45,7 @@ For composing styles from different definitions, the properties object is needed
 ### Input
 
 ```javascript
-import style9 from 'style9';
+import style9 from 'style10';
 
 const styles = style9.create({
   blue: {
@@ -66,7 +66,7 @@ document.body.className = style9(styles.blue, otherStyles.red);
 
 ```javascript
 /* JavaScript */
-import style9 from 'style9';
+import style9 from 'style10';
 
 const styles = {
   blue: {

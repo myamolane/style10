@@ -1,5 +1,5 @@
 /* eslint-env browser */
-import style9 from 'style9';
+import style9 from 'style10';
 
 const styles = style9.create({
   blue: {
